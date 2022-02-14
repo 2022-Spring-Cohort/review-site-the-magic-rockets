@@ -8,6 +8,7 @@ html{
 }
 html{
     scroll-behavior: smooth;
+    background-color: #ecdf22da;
 }
 
 .navbar{
@@ -19,6 +20,10 @@ html{
     position: sticky;
     top: 0;
 }
+.navbar > a {
+    text-decoration: none;
+    color: white;
+}
 .navbar ul{
     display: flex;
     list-style: none;
@@ -28,6 +33,48 @@ html{
     font-size: 1.5rem;
     font-weight: bold;
 }
+
+header > #teamname {
+    display: flex;
+    justify-content: center;
+}
+
+#searchbar {
+    display: flex;
+    justify-content: right;
+    padding: 7.5px;
+}
+
+#homepage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    align-self: center;
+    width: 1000px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.recentlist {
+    margin-bottom: 50px;
+}
+
+.topreviews {
+    margin-bottom: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#secondRecent {
+    width: 20%;
+}
+
+
 
 
 
