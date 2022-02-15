@@ -8,7 +8,7 @@ html{
 }
 html{
     scroll-behavior: smooth;
-    background-color: #ecdf22da;
+    background-color: #D3FF82;
 }
 
 .navbar{
@@ -16,7 +16,7 @@ html{
     justify-content: center;
     justify-content: space-evenly;
     align-items: center;
-    background-color: #A6242F;
+    background-color: #121D2B;
     position: sticky;
     top: 0;
 }
@@ -37,7 +37,15 @@ html{
 header > #teamname {
     display: flex;
     justify-content: center;
+    background-color: #121D2B;
+    color: white;
 }
+
+header > #teamname a {
+    color: #94B24D;
+    font-weight: bold;
+}
+
 .heading{
     text-align: center;
 }
@@ -78,7 +86,14 @@ header > #teamname {
 
 a {
     text-decoration: none;
-    color: black;
+}
+
+.categoryTypes >a {
+    color: #363D52;
+    font-weight: bold;
+    padding: 15px;
+    font-size: x-large;
+    margin-bottom: 5px;
 }
 
 .img_thumb{
@@ -104,16 +119,11 @@ li{
 .categoryTypes {
     display: flex;
     justify-content: space-between;
-    flex-direction: column;
+    flex-direction: row;
     padding: 50px;
     align-items: center;
 }
 
-.categoryTypes > a {
-    padding: 15px;
-    font-size: x-large;
-    margin-bottom: 5px;
-}
 
 .action {
     display: flex;
@@ -139,16 +149,39 @@ li{
     align-items: center;
 }
 
+.hashtagTypes  a {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    color: white;
+}
+
+.hashtagTypes {
+   /* max-width: 1000px; */
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.hashtagTypes ul {
+    list-style: none;
+
+}
+
+.hashtagTypes ul > li {
+    display: inline-flex;
+    background-color: #121D2B;
+    padding: 5px 15px;
+    margin: 5px 5px;
+    border-radius: 100px;
+    font-size: 40px;
+}
 
 
 
 
-
-
-/* yellow - body #F2E638
-   dull red - #F25041
-   greyish - #594848
-   
-   Brainstorming:
-   change hyperlinks
+/* hashtag types color issues
    */
