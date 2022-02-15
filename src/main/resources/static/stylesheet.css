@@ -180,8 +180,18 @@ li{
     font-size: 40px;
 }
 
+.logo {
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    background-color: #121D2B;
 
+}
 
-
-/* hashtag types color issues
-   */
+.logo1 {
+    width: 5%;
+    height: 5%;
+    display: flex;  
+    justify-content: center;
+    background-color: #121D2B;
+}
