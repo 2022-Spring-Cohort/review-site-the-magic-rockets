@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Categories</title>
+    <title>Document</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,50 +19,20 @@
     <nav class="navbar">
         <a href="categories.html">Categories</a>
         <a href="Hashtags.html">Hashtags</a>
-
         <div class="navbar" id="searchbar">
             <input type="text" placeholder="Search..">
         </div>
     </nav>
 </header>
 
-<h2 class="categoryHeader">Categories</h2>
-
 <section class="categoryTypes">
     <a href="Category.html" class="action">
-        Action
+<!--        TRYING TO FIGURE OUT THYMELEAF HERE!                               -->
+        <h2 th:text="'The title is ' + ${animeRepo.title}"></h2>
+
         <img src="/Pics/AoT.jpg" class="img_thumb">
     </a>
-
-    <a href="Category.html" class="romance">
-        Romance
-        <img src="/Pics/Romance.jpg" class="img_thumb">
-    </a>
-
-    <a href="Category.html" class="comedy">
-        Comedy
-        <img src="/Pics/Comedy.jpg" class="img_thumb">
-    </a>
-
-    <a href="Category.html" class="horror">
-        Horror
-        <img src="/Pics/Horror.jpg" class="img_thumb">
-    </a>
 </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <footer class="footer">
     <div class="footermessage">
