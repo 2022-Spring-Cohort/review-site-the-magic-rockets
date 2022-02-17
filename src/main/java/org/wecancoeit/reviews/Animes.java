@@ -12,17 +12,23 @@ public class Animes {
     public String Title;
     public String Producer;
     public String Description;
+    public String ImageUrl;
 
-    public Animes(String title, String producer, String description) {
-//        this.ID = ID;
+    public Animes(String title, String producer, String description, String imageUrl) {
+
         Title = title;
         Producer = producer;
         Description = description;
+        ImageUrl = imageUrl;
     }
-//
-//    public long getID() {
-//        return ID;
-//    }
+
+    public String getImageUrl() {
+        return ImageUrl;
+    }
+
+    public long getID() {
+        return ID;
+    }
 
     private Animes() {
     }

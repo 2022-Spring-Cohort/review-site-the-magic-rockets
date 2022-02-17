@@ -1,6 +1,6 @@
-package Controllers;
+package org.wecancoeit.reviews.Controllers;
 
-import Repos.AnimeRepository;
+import org.wecancoeit.reviews.Repos.AnimeRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,9 +14,9 @@ public class AnimeController {
     }
 
     @RequestMapping("/")
-    public String showShowTemplate(Model model) {
-        model.addAttribute("anime", animeRepo.findById(1l));
-        return "ShowTemplate";
+    public String showHomePage(Model model) {
+        model.addAttribute("animes", animeRepo.findAll());
+        return "AnimeTemplate";
     }
 
 
