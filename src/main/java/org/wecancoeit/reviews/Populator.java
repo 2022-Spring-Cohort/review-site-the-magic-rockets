@@ -5,20 +5,65 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import org.wecancoeit.reviews.Animes;
+import org.wecancoeit.reviews.Repos.CategoryRepository;
+import org.wecancoeit.reviews.Repos.HashtagRepository;
+import org.wecancoeit.reviews.Repos.ReviewRepository;
 
 @Component
 public class Populator implements CommandLineRunner {
     @Autowired
+    CategoryRepository categoryRepo;
+    @Autowired
+    HashtagRepository hashtagRepo;
+    @Autowired
     AnimeRepository animeRepo;
+    @Autowired
+    ReviewRepository reviewRepo;
+
     @Override
     public void run(String... args) throws Exception {
-        Animes anime = new Animes("Attack on Titan", "We Can Code IT", "Technically the titans are attacking on things.", "/Pics/Attack On Titan.jpg");
-        Animes anime1 = new Animes("Demon Slayer", "Warner Bros.", "Mess around and find out","/Pics/Demon Slayer.webp");
-        Animes anime2 = new Animes("Inuyasha","Funimation","Half-Demon Homie", "/Pics/Inuyasha.jpg");
+        Animes anime = new Animes("Attack on Titan",
+                "We Can Code IT",
+                "Technically the titans are attacking on things.",
+                "/Pics/Attack On Titan.jpg");
+        Animes anime1 = new Animes("Demon Slayer",
+                "Warner Bros.",
+                "Mess around and find out",
+                "/Pics/Demon Slayer.webp");
+        Animes anime2 = new Animes("Inuyasha",
+                "Funimation",
+                "Half-Demon Homie",
+                "/Pics/Inuyasha.jpg");
 
         animeRepo.save(anime);
         animeRepo.save(anime1);
         animeRepo.save(anime2);
+
+
+        Category action = new Category("Action");
+        Category romance = new Category("Romance");
+        Category horror = new Category("Horror");
+        Category comedy = new Category("Comedy");
+        categoryRepo.save(action);
+        categoryRepo.save(romance);
+        categoryRepo.save(horror);
+        categoryRepo.save(comedy);
+
+        Hashtag yolo = new Hashtag("#yolo");
+        Hashtag gore = new Hashtag("#gore");
+        Hashtag food = new Hashtag("#food");
+        Hashtag boring = new Hashtag("#boring");
+        hashtagRepo.save(yolo);
+        hashtagRepo.save(gore);
+        hashtagRepo.save(food);
+        hashtagRepo.save(boring);
+
+        Review one = new Review("Test text 1");
+        Review two = new Review("Test text 2");
+        reviewRepo.save(one);
+        reviewRepo.save(two);
+
+
 
     }
 }

@@ -1,8 +1,9 @@
 package org.wecancoeit.reviews;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
 
 @Entity
 public class Animes {
@@ -14,12 +15,29 @@ public class Animes {
     public String Description;
     public String ImageUrl;
 
-    public Animes(String title, String producer, String description, String imageUrl) {
+    @ManyToMany
+    private Collection<Category> category;
+
+    @ManyToMany
+    private Collection<Hashtag> hashtags;
+
+    @OneToMany(mappedBy = "animes")
+    private Collection<Review> reviews;
+
+    public Animes(String title, String producer, String description, String imageUrl, Category...categories) {
 
         Title = title;
         Producer = producer;
         Description = description;
         ImageUrl = imageUrl;
+        this.category = Arrays.asList(categories);
+        this.hashtags = new ArrayList<Hashtag>();
+        this.reviews = new ArrayList<Review>();
+    }
+
+    public void addHashtag(Hashtag hashtag) {
+        hashtags.add(hashtag);
+
     }
 
     public String getImageUrl() {
@@ -43,5 +61,17 @@ public class Animes {
 
     public String getDescription() {
         return Description;
+    }
+
+    public Collection<Category> getCategory() {
+        return category;
+    }
+
+    public Collection<Hashtag> getHashtags() {
+        return hashtags;
+    }
+
+    public Collection<Review> getReviews() {
+        return reviews;
     }
 }
