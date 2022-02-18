@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class AnimeController {
     private AnimeRepository animeRepo;
 
+
     public AnimeController(AnimeRepository animeRepo) {
         this.animeRepo = animeRepo;
     }
@@ -18,6 +19,7 @@ public class AnimeController {
         model.addAttribute("animes", animeRepo.findAll());
         return "AnimeTemplate";
     }
+
 
 
 }

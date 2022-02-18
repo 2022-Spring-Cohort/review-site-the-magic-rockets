@@ -22,22 +22,7 @@ public class Populator implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        Animes anime = new Animes("Attack on Titan",
-                "We Can Code IT",
-                "Technically the titans are attacking on things.",
-                "/Pics/Attack On Titan.jpg");
-        Animes anime1 = new Animes("Demon Slayer",
-                "Warner Bros.",
-                "Mess around and find out",
-                "/Pics/Demon Slayer.webp");
-        Animes anime2 = new Animes("Inuyasha",
-                "Funimation",
-                "Half-Demon Homie",
-                "/Pics/Inuyasha.jpg");
 
-        animeRepo.save(anime);
-        animeRepo.save(anime1);
-        animeRepo.save(anime2);
 
 
         Category action = new Category("Action");
@@ -62,6 +47,28 @@ public class Populator implements CommandLineRunner {
         Review two = new Review("Test text 2");
         reviewRepo.save(one);
         reviewRepo.save(two);
+
+        Animes anime = new Animes("Attack on Titan",
+                "We Can Code IT",
+                "Technically the titans are attacking on things.",
+                "/Pics/Attack On Titan.jpg", action);
+        Animes anime1 = new Animes("Demon Slayer",
+                "Warner Bros.",
+                "Mess around and find out",
+                "/Pics/Demon Slayer.webp", action, romance);
+        Animes anime2 = new Animes("Inuyasha",
+                "Funimation",
+                "Half-Demon Homie",
+                "/Pics/Inuyasha.jpg", horror, action);
+
+//
+        anime.addHashtag(yolo);
+        anime.addHashtag(boring);
+        anime1.addHashtag(gore);
+        anime2.addHashtag(food);
+        animeRepo.save(anime);
+        animeRepo.save(anime1);
+        animeRepo.save(anime2);
 
 
 
