@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Categories</title>
+    <title>Document</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,45 +19,59 @@
     <nav class="navbar">
         <a href="/categories">Categories</a>
         <a href="/hashtags">Hashtags</a>
-
         <div class="navbar" id="searchbar">
             <input type="text" placeholder="Search..">
         </div>
     </nav>
 </header>
 
-<h2 class="categoryHeader">Categories</h2>
 
-<section class="categoryTypes">
-<!--    <a th:each = "currentCategory:${categories}"-->
-<!--       th:href="'/category/' + ${currentCategory.ID}" class="action"-->
-<!--       th:text="${currentCategory.Category}">-->
+<section class="hashtagTypes">
 
-<!--        <img th:each="current"-->
-<!--                th:src="${currentAnime.ImageUrl}" class="img_thumb">-->
-<!--    </a>-->
+    <ul>
+        <li> <a href="HashtagTemplate.html" class="">
+            Yolo
 
-    <a href="ShowTemplate" class="action">
-        Romance
-        <img src="/Pics/Action.jpg" class="img_thumb">
-    </a>
+        </a>
+        </li>
+        <li> <a href="HashtagTemplate.html" class="">
+            Gore
 
-    <a href="RomanceCategory.html" class="romance">
-        Romance
-        <img src="/Pics/Romance.jpg" class="img_thumb">
-    </a>
+        </a>
+        </li>
 
-    <a href="ComedyCategory.html" class="comedy">
-        Comedy
-        <img src="/Pics/Comedy.jpg" class="img_thumb">
-    </a>
+        <li><a href="HashtagTemplate.html" class="">
+            Food
 
-    <a href="HorrorCategory.html" class="horror">
-        Horror
-        <img src="/Pics/Horror.jpg" class="img_thumb">
-    </a>
+        </a>
+        </li>
+
+        <li><a href="HashtagTemplate.html" class="">
+            Horror
+
+        </a>
+        </li>
+        <br>
+
+        <li><a href="HashtagTemplate.html" class="">
+            Mecha
+
+        </a>
+        </li>
+
+        <li><a href="HashtagTemplate.html" class="">
+            Boring
+
+        </a>
+        </li>
+
+        <li><a href="HashtagTemplate.html" class="">
+            Romance
+
+        </a>
+        </li>
+    </ul>
 </section>
-
 
 
 <footer class="footer">
