@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,8 +17,8 @@
     </div>
 
     <nav class="navbar">
-        <a href="/categories">Categories</a>
-        <a href="/hashtags">Hashtags</a>
+        <a href="categories.html">Categories</a>
+        <a href="Hashtags.html">Hashtags</a>
         <div class="navbar" id="searchbar">
             <input type="text" placeholder="Search..">
         </div>
@@ -27,24 +27,25 @@
 
 
 <section class="categoryTypes">
-<!--    <a href="Show.html" class="action">-->
+    <a href="Show.html" class="action">
 
-<!--        <img src="Pics/classroom.webp" class="img_thumb">-->
-<!--    </a>-->
+        <img src="Pics/Attack On Titan.jpg" class="img_thumb">
+    </a>
 
-    <ul>
-        <li th:each = "currentCategory:${categories}">
-            <div th:each = "currentAnime:${currentCategory.animes}">
-                <h2 th:text = "${currentCategory.category}"></h2>
-                <a href="http://www.google.com">
-                    <img th:id="'firstRecent'+${currentCategory.ID}"
-                         class="img_thumb"
-                         th:src="${currentCategory.ImageUrl}"/>
-                </a>
-            </div>
+    <a href="Show.html" class="action">
 
-        </li>
-    </ul>
+        <img src="Pics/Demon Slayer.webp" class="img_thumb">
+    </a>
+
+    <a href="Show.html" class="action">
+
+        <img src="Pics/myhero.jpg" class="img_thumb">
+    </a>
+
+    <a href="Show.html" class="action">
+
+        <img src="Pics/onepunch.jpg" class="img_thumb">
+    </a>
 </section>
 
 
