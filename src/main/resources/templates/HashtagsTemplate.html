@@ -13,7 +13,7 @@
 <body>
 <header>
     <div id="teamname">
-        <a href="index.html">Magic Rockets Reviews</a>
+        <a href="/">Magic Rockets Reviews</a>
     </div>
 
     <nav class="navbar">
@@ -27,50 +27,57 @@
 
 
 <section class="hashtagTypes">
-
     <ul>
-        <li> <a href="HashtagTemplate.html" class="">
-            Yolo
+    <li th:each = "currentHashtag:${hashtags}">
+    <a th:href="'/hashtag/' + ${currentHashtag.ID}" class=""
+           th:text="${currentHashtag.Hashtag}">
 
-        </a>
-        </li>
-        <li> <a href="HashtagTemplate.html" class="">
-            Gore
-
-        </a>
-        </li>
-
-        <li><a href="HashtagTemplate.html" class="">
-            Food
-
-        </a>
-        </li>
-
-        <li><a href="HashtagTemplate.html" class="">
-            Horror
-
-        </a>
-        </li>
-        <br>
-
-        <li><a href="HashtagTemplate.html" class="">
-            Mecha
-
-        </a>
-        </li>
-
-        <li><a href="HashtagTemplate.html" class="">
-            Boring
-
-        </a>
-        </li>
-
-        <li><a href="HashtagTemplate.html" class="">
-            Romance
-
-        </a>
-        </li>
+    </a>
+    </li>
     </ul>
+<!--    <ul>-->
+<!--        <li> <a href="" class="">-->
+<!--            Yolo-->
+
+<!--        </a>-->
+<!--        </li>-->
+<!--        <li> <a href="" class="">-->
+<!--            Gore-->
+
+<!--        </a>-->
+<!--        </li>-->
+
+<!--        <li><a href="HashtagTemplate.html" class="">-->
+<!--            Food-->
+
+<!--        </a>-->
+<!--        </li>-->
+
+<!--        <li><a href="HashtagTemplate.html" class="">-->
+<!--            Horror-->
+
+<!--        </a>-->
+<!--        </li>-->
+<!--        <br>-->
+
+<!--        <li><a href="HashtagTemplate.html" class="">-->
+<!--            Mecha-->
+
+<!--        </a>-->
+<!--        </li>-->
+
+<!--        <li><a href="HashtagTemplate.html" class="">-->
+<!--            Boring-->
+
+<!--        </a>-->
+<!--        </li>-->
+
+<!--        <li><a href="HashtagTemplate.html" class="">-->
+<!--            Romance-->
+
+<!--        </a>-->
+<!--        </li>-->
+<!--    </ul>-->
 </section>
 
 
