@@ -43,11 +43,6 @@ public class Populator implements CommandLineRunner {
         hashtagRepo.save(food);
         hashtagRepo.save(boring);
 
-        Review one = new Review("Test text 1");
-        Review two = new Review("Test text 2");
-        reviewRepo.save(one);
-        reviewRepo.save(two);
-
         Animes anime = new Animes("Attack on Titan",
                 "We Can Code IT",
                 "Technically the titans are attacking on things.",
@@ -66,9 +61,20 @@ public class Populator implements CommandLineRunner {
         anime.addHashtag(boring);
         anime1.addHashtag(gore);
         anime2.addHashtag(food);
+
         animeRepo.save(anime);
         animeRepo.save(anime1);
         animeRepo.save(anime2);
+
+        Review one = new Review("Test text 1", anime);
+        Review two = new Review("Test text 2", anime1);
+        Review three = new Review("Testing 3", anime2);
+        Review four = new Review("Testestestest", anime2);
+        reviewRepo.save(one);
+        reviewRepo.save(two);
+        reviewRepo.save(three);
+        reviewRepo.save(four);
+
 
 
 

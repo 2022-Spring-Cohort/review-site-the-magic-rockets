@@ -16,8 +16,13 @@ public class Review {
     @ManyToOne
     private Animes animes;
 
-    public Review(String review) {
+    public Review(){
+
+    }
+
+    public Review(String review, Animes animes) {
         this.review = review;
+        this.animes = animes;
     }
 
     public String getReview() {
@@ -30,5 +35,10 @@ public class Review {
 
     public Animes getAnimes() {
         return animes;
+    }
+
+    @Override
+    public String toString() {
+        return review;
     }
 }
