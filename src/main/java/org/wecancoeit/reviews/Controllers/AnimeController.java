@@ -1,5 +1,6 @@
 package org.wecancoeit.reviews.Controllers;
 
+import org.springframework.web.bind.annotation.PathVariable;
 import org.wecancoeit.reviews.Repos.AnimeRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,4 +21,15 @@ public class AnimeController {
         return "AnimeTemplate";
     }
 
-}
+    @RequestMapping("/show/{ID}")
+    public String showShowPage(Model model, @PathVariable long ID) {
+        model.addAttribute("anime", animeRepo.findById(ID).get());
+        return "ShowTemplate";
+
+
+
+//    @RequestMapping("/show/{ID}")
+//    public String showShowPage(Model model) {
+//
+//    }
+}}

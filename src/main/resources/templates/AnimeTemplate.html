@@ -39,8 +39,8 @@
         <ul>
             <li th:each = "currentAnime:${animes}">
                 <h2 th:text = "${currentAnime.title}"></h2>
-                <a href="http://www.google.com">
-                    <img th:id="'firstRecent'+${currentAnime.ID}"
+                <a th:href="'/show/' + ${currentAnime.ID}">
+                    <img th:id="'recent'+${currentAnime.ID}"
                          class="img_thumb"
                          th:src="${currentAnime.ImageUrl}"
                          alt="Attack On Titan" />
@@ -54,7 +54,7 @@
         <ul>
             <li th:each = "currentAnime:${animes}">
                 <h2 th:text = "${currentAnime.title}"></h2>
-                <a href="http://www.google.com">
+                <a th:href="'/show/' + ${currentAnime.ID}">
                     <img th:id="'firstRecent'+${currentAnime.ID}"
                          class="img_thumb"
                          th:src="${currentAnime.ImageUrl}"

@@ -16,7 +16,7 @@ public class Category {
 
 
     @ManyToMany(mappedBy = "category")
-    private Collection<Animes> animes;
+    private Collection<Animes> animeList;
 
 
     public Category() {
@@ -34,8 +34,8 @@ public class Category {
         return ID;
     }
 
-    public Collection<Animes> getAnimes() {
-        return animes;
+    public Collection<Animes> getAnimeList() {
+        return animeList;
     }
 
 }

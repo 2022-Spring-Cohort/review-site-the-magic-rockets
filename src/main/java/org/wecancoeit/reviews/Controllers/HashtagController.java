@@ -23,7 +23,7 @@ public class HashtagController {
 
     @RequestMapping("/hashtag/{ID}")
     public String showHashtagPage(Model model, @PathVariable long ID) {
-        model.addAttribute("hashtag", hashtagRepo.findById(ID));
+        model.addAttribute("hashtag", hashtagRepo.findById(ID).get());
         return "HashtagTemplate";
 
     }

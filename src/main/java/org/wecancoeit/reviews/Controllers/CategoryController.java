@@ -22,7 +22,7 @@ public class CategoryController {
 
     @RequestMapping("/category/{ID}")
     public String showCategoryPage(Model model, @PathVariable long ID) {
-        model.addAttribute("category", categoryRepo.findById(ID));
+        model.addAttribute("category", categoryRepo.findById(ID).get());
         return "CategoryTemplate";
 
     }
