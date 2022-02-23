@@ -61,7 +61,7 @@ public class Populator implements CommandLineRunner {
                 "Half-Demon Homie",
                 "/Pics/Inuyasha.jpg", horror, action);
 
-//
+
         anime.addHashtag(yolo);
         anime.addHashtag(boring);
         anime1.addHashtag(gore);
