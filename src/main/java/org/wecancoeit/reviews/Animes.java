@@ -38,9 +38,6 @@ public class Animes {
     public void addHashtag(Hashtag hashtag) {
         hashtags.add(hashtag);
     }
-    public void addReview(Review review){
-        reviews.add(review);
-    }
 
     public String getImageUrl() {
         return ImageUrl;
@@ -76,4 +73,5 @@ public class Animes {
     public Collection<Review> getReviews() {
         return reviews;
     }
+
 }

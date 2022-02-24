@@ -1,18 +1,24 @@
 package org.wecancoeit.reviews.Controllers;
 
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.*;
+import org.wecancoeit.reviews.Animes;
 import org.wecancoeit.reviews.Repos.AnimeRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.wecancoeit.reviews.Repos.ReviewRepository;
+import org.wecancoeit.reviews.Review;
+
+import java.util.Optional;
 
 @Controller
 public class AnimeController {
     private AnimeRepository animeRepo;
+    private ReviewRepository reviewRepo;
 
 
-    public AnimeController(AnimeRepository animeRepo) {
+    public AnimeController(AnimeRepository animeRepo, ReviewRepository reviewRepo) {
         this.animeRepo = animeRepo;
+        this.reviewRepo = reviewRepo;
     }
 
     @RequestMapping("/")
@@ -21,15 +27,20 @@ public class AnimeController {
         return "AnimeTemplate";
     }
 
-    @RequestMapping("/show/{ID}")
-    public String showShowPage(Model model, @PathVariable long ID) {
-        model.addAttribute("anime", animeRepo.findById(ID).get());
+    @GetMapping("/show/{ID}")
+    public String showShowTemplate(Model model, @PathVariable long ID) {
+        Optional<Animes> tempAnime = animeRepo.findById(ID);
+        if (tempAnime.isPresent()) {
+            model.addAttribute("anime", tempAnime.get());
+        }
         return "ShowTemplate";
+    }
 
-
-
-//    @RequestMapping("/show/{ID}")
-//    public String showShowPage(Model model) {
-//
-//    }
-}}
+    @PostMapping("/show/{ID}")
+    public String addReview(@PathVariable long ID, @RequestParam String review){
+        Animes myAnime = animeRepo.findById(ID).get();
+        Review myReview = new Review(review, myAnime);
+        reviewRepo.save(myReview);
+        return "redirect:/show/"+ ID;
+    }
+}
