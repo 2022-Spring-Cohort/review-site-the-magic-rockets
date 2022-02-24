@@ -65,17 +65,17 @@ public class Populator implements CommandLineRunner {
         hashtagRepo.save(fantasy);
 
         Animes AttackOnTitan = new Animes("Attack on Titan",
-                "We Can Code IT",
-                "Technically the titans are attacking on things.",
-                "/Pics/Attack On Titan.jpg", action);
+                "WIT Studio, MAPPA",
+                "Set in a world where humanity lives inside cities surrounded by three enormous walls that protect them from the gigantic man-eating humanoids referred to as Titans.",
+                "/Pics/Attack On Titan.jpg", action, horror);
         Animes DemonSlayer = new Animes("Demon Slayer",
-                "Warner Bros.",
-                "Mess around and find out",
-                "/Pics/Demon Slayer.webp", action, romance);
+                "Ufotable",
+                "A family is attacked by demons and only two members survive - Tanjiro and his sister Nezuko, who is turning into a demon slowly.",
+                "/Pics/Demon Slayer.webp", action, horror);
         Animes Inuyasha = new Animes("Inuyasha",
-                "Funimation",
-                "Half-Demon Homie",
-                "/Pics/Inuyasha.jpg", horror, action);
+                "Sunrise",
+                "The story of a dog half-demon who is constantly after a jewel of immense power, the Shikon jewel.",
+                "/Pics/Inuyasha.jpg", horror, action, romance);
         Animes Clannad = new Animes("Clannad",
                 "Kyoto Animation",
                 "The story follows the life of Tomoya Okazaki, from adolescence to adulthood.",
@@ -120,7 +120,7 @@ public class Populator implements CommandLineRunner {
         Animes DragonBall = new Animes("Dragon Ball",
                 "Toei",
                 "An epic tale, centered around a strange boy named Goku and his ragtag team of friends!",
-                "", action);
+                "/Pics/dragonball.jpg", action);
         Animes MyHero = new Animes("My Hero Academia",
                 "Animax",
                 "A superhero anime following a boy born without powers in a world where they're commonplace.",
@@ -128,7 +128,7 @@ public class Populator implements CommandLineRunner {
         Animes Fullmetal = new Animes("Fullmetal Alchemist",
                 "Animax",
                 "A tale following two brothers on a quest to regain their destroyed bodies.",
-                "", action);
+                "/Pics/fullmetal.jpg", action);
 
         AttackOnTitan.addHashtag(yolo);
         AttackOnTitan.addHashtag(boring);

@@ -45,7 +45,7 @@
 
 </form>
 
-<form th:action="'/hashtags/' +${anime.ID}" th:object ="${newHashtag}" method="POST">
+<form th:action="'/show/' +${anime.ID} +'/addhashtag'" th:object ="${newHashtag}" method="POST">
     <textarea name="hashtag" id="hashtag" cols="30" rows="10" placeholder="Leave a Hashtag!"></textarea>
     <input type="submit" name="SEND" id="sendHashtag">
 
