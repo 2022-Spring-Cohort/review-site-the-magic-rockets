@@ -27,9 +27,10 @@
 
 <section class="categoryTypes">
     <h2 th:text="${anime.title}"></h2>
+    <p th:text="${anime.description}"></p>
     <img th:src="${anime.ImageUrl}" class="img_thumb">
 
-    <h2 th:each="Review:${anime.reviews}" th:text="${Review.review}"></h2>
+    <p th:each="Review:${anime.reviews}" th:text="${Review.review}"></p>
 
 
 <!--    <a href="Category.html" class="action">-->
@@ -40,7 +41,13 @@
 
 <form th:action="'/show/' +${anime.ID}" th:object ="${newReview}" method="POST">
     <textarea name="review" id="review" cols="30" rows="10" placeholder="Leave Your Review!"></textarea>
-    <input type="submit" name="SEND" id="send">
+    <input type="submit" name="SEND" id="sendReview">
+
+</form>
+
+<form th:action="'/hashtags/' +${anime.ID}" th:object ="${newHashtag}" method="POST">
+    <textarea name="hashtag" id="hashtag" cols="30" rows="10" placeholder="Leave a Hashtag!"></textarea>
+    <input type="submit" name="SEND" id="sendHashtag">
 
 </form>
 
