@@ -198,7 +198,7 @@ public class Populator implements CommandLineRunner {
         animeRepo.save(foodWars);
 
         Review one = new Review("Test text 1", AttackOnTitan);
-        Review two = new Review("Test text 2", DemonSlayer);
+        Review two = new Review("A jovial romp through the eyes of a doomed child. Would recommend!", DemonSlayer);
         Review three = new Review("Testing 3", Inuyasha);
         Review four = new Review("Testestestest", naruto);
         reviewRepo.save(one);

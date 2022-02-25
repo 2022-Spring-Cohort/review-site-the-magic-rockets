@@ -26,22 +26,32 @@
 <section class="showPage">
     <h2 class="title" th:text="${anime.title}"></h2>
     <img th:src="${anime.ImageUrl}" class="showImg">
-
-
-
     <p class="description" th:text="${anime.description}"></p>
+    <p class="producers" th:text="'Producer: ' + ${anime.producer}"></p>
 
-    <p th:each="Review:${anime.reviews}" th:text="${Review.review}"></p>
+        <article class="showPageHash">
+            <ul>
+                <li th:each="Hashtag:${anime.hashtags}">
+                    <a
 
+                            th:href="'/hashtag/' + ${Hashtag.ID}" class="showHashtags"
+                            th:text="${Hashtag.Hashtag}">
 
+                    </a>
+                </li>
+            </ul>
 
-
-
-    <article class="showPageHash">
-    <p class="showHashtags" th:each="Hashtag:${anime.hashtags}" th:text="${Hashtag.hashtag}"></p>
-    </article>
-    <p class="producers" th:text="${anime.producer}"></p>
+        </article>
 </section>
+
+<section class="reviewsColumn">
+    <h2 class="reviewsHeader">Reviews</h2>
+        <ul>
+            <li class="reviews" th:each="Review:${anime.reviews}" th:text="${Review.review}"></li>
+        </ul>
+</section>
+
+
 
 <form th:action="'/show/' +${anime.ID}" th:object ="${newReview}" method="POST">
     <textarea name="review" id="review" cols="30" rows="10" placeholder="Leave Your Review!"></textarea>
