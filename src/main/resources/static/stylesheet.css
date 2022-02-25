@@ -95,11 +95,14 @@ a {
 }
 
 .categoryTypes >a {
-    color: #363D52;
+    color: white;
     font-weight: bold;
     padding: 15px;
     font-size: x-large;
     margin-bottom: 5px;
+    background-color: #121D2B;
+    border-radius: 10%;
+
 }
 
 .img_thumb{
@@ -125,9 +128,16 @@ li{
 .categoryTypes {
     display: flex;
     justify-content: space-between;
-    flex-direction: row;
+    flex-wrap: wrap;
     padding: 50px;
     align-items: center;
+}
+
+.categoryTypes ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
 }
 
 
@@ -169,12 +179,15 @@ li{
     padding: 10px;
     display: flex;
     justify-content: center;
-
 }
 
 .hashtagTypes ul {
     list-style: none;
-
+    display: flex;
+    flex-wrap: wrap;
+    justify-self: center;
+    align-self: center;
+    justify-content: center;
 }
 
 .hashtagTypes ul > li {

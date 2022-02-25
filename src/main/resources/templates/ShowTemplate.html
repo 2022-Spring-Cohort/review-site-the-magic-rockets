@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/stylesheet.css">
+    <link rel="stylesheet" href="/showlayout.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -28,13 +29,16 @@
 <section class="categoryTypes">
     <h2 th:text="${anime.title}"></h2>
     <p th:text="${anime.description}"></p>
+    <p th:text="${anime.producer}"></p>
+
     <img th:src="${anime.ImageUrl}" class="img_thumb">
 
     <p th:each="Review:${anime.reviews}" th:text="${Review.review}"></p>
-<!--    &lt;!&ndash;    <h3 th:each="currentAnime:${anime.category}"></h3>&ndash;&gt;-->
+    <p th:each="Hashtag:${anime.hashtags}" th:text="${Hashtag.hashtag}"></p>
 
-<!--    <p th:text="${anime.reviews}"></p>-->
-<!--    <p th:text="${anime.hashtags}" ></p>-->
+
+
+
 </section>
 
 <form th:action="'/show/' +${anime.ID}" th:object ="${newReview}" method="POST">
