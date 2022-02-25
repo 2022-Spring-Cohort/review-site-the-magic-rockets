@@ -5,7 +5,7 @@ p {
 
 .showPage {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     padding: 50px;
     align-items: center;
@@ -22,16 +22,21 @@ p {
 
 .showImg {
     align-self: flex-start;
-    width: 400px;
-    height: 525px;
+    width: 300px;
+    height: 400px;
     padding: 10px;
     border-radius: 5%;
+    max-width: 400px;
 }
 
 .description {
-    align-self: flex-end;
+    display: flex;
+    align-self: flex-start;
+    justify-content: flex-start;
     border-bottom: 500px;
-    width: 50%;
+    width: 65%;
+    font-size: xx-large;
+    padding: 20px;
 }
 
 .producers {
@@ -40,18 +45,56 @@ p {
     justify-content: flex-start;
     width: 200px;
     justify-self: center;
-    padding-top: 30px;
+    padding-top: 10px;
+    font-weight: bold;
+    padding-left: 20px;
 }
 
+.reviewsColumn {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    width: 100%
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
 
+.reviewsHeader {
+    font-size: xx-large;
+    margin: 20px;
+}
 
-
-
-
+.reviewsColumn ul li {
+    background-color: black;
+    justify-content: flex-end;
+    justify-self: flex-end;
+    color: white;
+    border-radius: 50px;
+    margin-bottom: 25px;
+    list-style: none;
+    max-width: 400px;
+    flex-wrap: wrap;
+}
 
 
 .showPageHash {
     display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    max-width: 100%;
+    flex-wrap: wrap;
+    justify-items: center;
+    align-items: center;
+}
+
+.showPageHash ul {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.showPageHash ul li {
+    list-style: none;
 }
 
 .showHashtags {
@@ -68,6 +111,7 @@ form {
     display: flex;
     justify-self: center;
     justify-content: center;
+    padding-bottom: 20px;
 }
 
 
