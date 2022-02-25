@@ -31,7 +31,10 @@
     <img th:src="${anime.ImageUrl}" class="img_thumb">
 
     <p th:each="Review:${anime.reviews}" th:text="${Review.review}"></p>
+<!--    &lt;!&ndash;    <h3 th:each="currentAnime:${anime.category}"></h3>&ndash;&gt;-->
 
+<!--    <p th:text="${anime.reviews}"></p>-->
+<!--    <p th:text="${anime.hashtags}" ></p>-->
 </section>
 
 <form th:action="'/show/' +${anime.ID}" th:object ="${newReview}" method="POST">
@@ -41,7 +44,7 @@
 </form>
 
 <form th:action="'/show/' +${anime.ID} +'/addhashtag'" th:object ="${newHashtag}" method="POST">
-    <textarea name="hashtag" id="hashtag" cols="30" rows="10" placeholder="Leave a Hashtag!"></textarea>
+    <textarea name="hashtag" id="hashtag" cols="20" rows="2" placeholder="Leave a Hashtag!"></textarea>
     <input type="submit" name="SEND" id="sendHashtag">
 
 </form>

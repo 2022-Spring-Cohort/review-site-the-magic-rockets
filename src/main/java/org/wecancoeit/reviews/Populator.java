@@ -193,7 +193,7 @@ public class Populator implements CommandLineRunner {
         Review one = new Review("Test text 1", AttackOnTitan);
         Review two = new Review("Test text 2", DemonSlayer);
         Review three = new Review("Testing 3", Inuyasha);
-        Review four = new Review("Testestestest", Inuyasha);
+        Review four = new Review("Testestestest", naruto);
         reviewRepo.save(one);
         reviewRepo.save(two);
         reviewRepo.save(three);
