@@ -129,6 +129,10 @@ public class Populator implements CommandLineRunner {
                 "Animax",
                 "A tale following two brothers on a quest to regain their destroyed bodies.",
                 "/Pics/fullmetal.jpg", action);
+        Animes foodWars = new Animes("Food Wars",
+                "JC Staff",
+                "Teenager Soma Yukihira aspires to become a full-time chef in his father, Joichiro's family restaurant and surpass his father's culinary skills, but Joichiro gets a new job that requires him to travel around the world and close his shop",
+                "/Pics/foodwars.jpg", comedy);
 
         AttackOnTitan.addHashtag(yolo);
         AttackOnTitan.addHashtag(boring);
@@ -170,6 +174,8 @@ public class Populator implements CommandLineRunner {
         Fullmetal.addHashtag(fantasy);
         Fullmetal.addHashtag(coolFights);
         Fullmetal.addHashtag(wild);
+        foodWars.addHashtag(food);
+        foodWars.addHashtag(yolo);
 
 
 
@@ -189,6 +195,7 @@ public class Populator implements CommandLineRunner {
         animeRepo.save(DragonBall);
         animeRepo.save(MyHero);
         animeRepo.save(Fullmetal);
+        animeRepo.save(foodWars);
 
         Review one = new Review("Test text 1", AttackOnTitan);
         Review two = new Review("Test text 2", DemonSlayer);
