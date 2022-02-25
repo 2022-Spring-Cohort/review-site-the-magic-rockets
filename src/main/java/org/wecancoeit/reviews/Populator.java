@@ -173,13 +173,6 @@ public class Populator implements CommandLineRunner {
 
 
 
-
-
-
-
-
-
-
         animeRepo.save(AttackOnTitan);
         animeRepo.save(DemonSlayer);
         animeRepo.save(Inuyasha);

@@ -28,11 +28,26 @@
 <section class="categoryTypes">
 
 <div>
-            <a th:each = "currentAnime:${hashtag.animes}"
-               th:href = "'/show/' + ${currentAnime.ID}"
-               th:text="${currentAnime.title}">Filler</a>
 
+    <h2 th:text="${hashtag.hashtag}"></h2>
+
+    <ul>
+        <li th:each = "currentAnime:${hashtag.animes}">
+            <h2 th:text = "${currentAnime.title}"></h2>
+            <a th:href="'/show/' + ${currentAnime.ID}">
+                <img th:id="'firstRecent'+${currentAnime.ID}"
+                     class="img_thumb"
+                     th:src="${currentAnime.ImageUrl}"
+                     alt="Attack On Titan" />
             </a>
+        </li>
+    </ul>
+<!--            <a th:each = "currentAnime:${hashtag.animes}"-->
+<!--               th:href = "'/show/' + ${currentAnime.ID}"-->
+<!--               th:text="${currentAnime.title}">-->
+<!--            Filler</a>-->
+
+
 
 
 </div>

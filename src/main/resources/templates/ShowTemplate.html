@@ -32,11 +32,6 @@
 
     <p th:each="Review:${anime.reviews}" th:text="${Review.review}"></p>
 
-
-<!--    <a href="Category.html" class="action">-->
-
-<!--        <img src="/Pics/AoT.jpg" class="img_thumb">-->
-<!--    </a>-->
 </section>
 
 <form th:action="'/show/' +${anime.ID}" th:object ="${newReview}" method="POST">
