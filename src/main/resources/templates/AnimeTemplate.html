@@ -32,7 +32,7 @@
 
 <section id="homepage">
     <div class="recentlist">
-        <h1 class="heading">Recent Reviews</h1>
+        <h1 class="heading">All Shows</h1>
         <ul>
             <li th:each = "currentAnime:${animes}">
                 <h2 th:text = "${currentAnime.title}"></h2>
@@ -46,20 +46,20 @@
         </ul>
     </div>
 
-    <div class="topreviews">
-        <h1 class="heading">Top Reviews</h1>
-        <ul>
-            <li th:each = "currentAnime:${animes}">
-                <h2 th:text = "${currentAnime.title}"></h2>
-                <a th:href="'/show/' + ${currentAnime.ID}">
-                    <img th:id="'firstRecent'+${currentAnime.ID}"
-                         class="img_thumb"
-                         th:src="${currentAnime.ImageUrl}"
-                         alt="Attack On Titan" />
-                </a>
-            </li>
-        </ul>
-    </div>
+<!--    <div class="topreviews">-->
+<!--        <h1 class="heading">Top Reviews</h1>-->
+<!--        <ul>-->
+<!--            <li th:each = "currentAnime:${animes}">-->
+<!--                <h2 th:text = "${currentAnime.title}"></h2>-->
+<!--                <a th:href="'/show/' + ${currentAnime.ID}">-->
+<!--                    <img th:id="'firstRecent'+${currentAnime.ID}"-->
+<!--                         class="img_thumb"-->
+<!--                         th:src="${currentAnime.ImageUrl}"-->
+<!--                         alt="Attack On Titan" />-->
+<!--                </a>-->
+<!--            </li>-->
+<!--        </ul>-->
+<!--    </div>-->
 
 </section>
 
