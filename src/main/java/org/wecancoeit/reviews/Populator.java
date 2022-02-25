@@ -197,14 +197,42 @@ public class Populator implements CommandLineRunner {
         animeRepo.save(Fullmetal);
         animeRepo.save(foodWars);
 
-        Review one = new Review("Test text 1", AttackOnTitan);
-        Review two = new Review("A jovial romp through the eyes of a doomed child. Would recommend!", DemonSlayer);
-        Review three = new Review("Testing 3", Inuyasha);
-        Review four = new Review("Testestestest", naruto);
+        Review one = new Review("This series has a lot of well animated action sequences that grip you. The settings and characters feel very detailed and you never know how things will turn out. My only complaint is that it takes a while for the story to pick up.", AttackOnTitan);
+        Review two = new Review("With stunning swordfights and supernatural powers, high stakes, a lot of heart, and even a fair amount of humor, the 26-episode first season has everything you need for your next anime binge watch.", DemonSlayer);
+        Review three = new Review("Inuyasha has a little bit of everything - folklore, love triangles, anachronism, demon racism, villains that are just as relatable as protagonists - and nicely wraps it up in an intricately detailed story.", Inuyasha);
+        Review four = new Review("I only post reviews for shows I have watched completely to the last episode and I will never recommend an anime to every person because frankly, what I like may not be the same for another person.", naruto);
+        Review five = new Review("Its an incredibly well executed adaptation of an incredibly popular manga that's popular for a reason. The combination of incredible cooking animation and ridiculous reactions make this show a much watch of the season or even a must watch in general.", foodWars );
+        Review six = new Review("It's a show that will have your feelings violently oscillating between emotional exhaustion and overwhelming exultation for the well-placed humor and the well-deserved triumphs.", Fullmetal);
+        Review seven = new Review("If you love superheroes but are put off by the many barriers to entry for getting into modern cape comics, My Hero Academia is for you.", MyHero);
+        Review eight = new Review("An amazingly unique concept with heartwarming storyline and screenplay. As you watch it you feel light and stress free. Amazingly binging.", DragonBall);
+        Review nine = new Review("Most people see this and ignore the quality of the story just because of the goryness. It's a thrilling and entertaining script, with nice twists. And for those who enjoy some violence and blood, is a must!", bloodC);
+        Review ten = new Review("\"Gurenn Lagann\" is one of the best anime titles of all time, a series where imagination, originality and implementation are of the highest degree.", gurrenLagann);
+        Review eleven = new Review("It's the way it takes well-worn tropes from countless anime series and throws them back with a nod and a wink that makes it frequently funny.", killLaKill);
+        Review twelve = new Review("\"Tokyo Ghoul\" is an excellent title, that may not reach exactly the level the top titles of the category have, due to a few clichés here and there, but is definitely not far behind.", tokyoGhoul);
+        Review thirteen = new Review("Nothing special. It's nice to watch. Sometimes boring. It does not contain any particular message. Simple, fun. But there is no ending. As if someone halfway just decided to end the series.", maidSama);
+        Review fourteen = new Review("If you love 80's body horror and/or genuinely cerebral horror, then you need to watch this. One of the two smartest animes animes I've ever seen .", parasyteTheMaxim);
+        Review fifteen = new Review("9/10 A story of the hardships of a young man and his experience in romance. This was an anime that was cute and funny at times and heart wrenching and wholesome at other.", Clannad);
+        Review sixteen = new Review ("This anime is amazing. I just finished it and I can't stop crying. This desperately needs a second season although I know it's not gonna happen. I recommend this anime to everybody who loves high school romances.",toradora);
+        Review seventeen = new Review ("Watching this show is really entertaining and satisfying.. There's intelligence and logic behind the writing, the action, drama and comedy are well balanced and exhilarating..",thatTimeIGotReincarnatedAsASlime);
         reviewRepo.save(one);
         reviewRepo.save(two);
         reviewRepo.save(three);
         reviewRepo.save(four);
+        reviewRepo.save(five);
+        reviewRepo.save(six);
+        reviewRepo.save(seven);
+        reviewRepo.save(eight);
+        reviewRepo.save(nine);
+        reviewRepo.save(ten);
+        reviewRepo.save(eleven);
+        reviewRepo.save(twelve);
+        reviewRepo.save(thirteen);
+        reviewRepo.save(fourteen);
+        reviewRepo.save(fifteen);
+        reviewRepo.save(sixteen);
+        reviewRepo.save(seventeen);
+
+
 
 
     }
