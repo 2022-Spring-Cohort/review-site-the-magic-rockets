@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheet.css">
+    <link rel="stylesheet" href="/showlayout.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div id="teamname">
+        <a href="/">Magic Rockets Reviews</a>
+    </div>
+
+    <nav class="navbar">
+        <a href="/categories">Categories</a>
+        <a href="/hashtags">Hashtags</a>
+    </nav>
+</header>
+
+<section class="showPage">
+    <h2 class="title" th:text="${anime.title}"></h2>
+    <img th:src="${anime.ImageUrl}" class="showImg">
+    <p class="description" th:text="${anime.description}"></p>
+    <p class="producers" th:text="'Producer: ' + ${anime.producer}"></p>
+
+        <article class="showPageHash">
+            <ul>
+                <li th:each="Hashtag:${anime.hashtags}">
+                    <a
+
+                            th:href="'/hashtag/' + ${Hashtag.ID}" class="showHashtags"
+                            th:text="${Hashtag.Hashtag}">
+
+                    </a>
+                </li>
+            </ul>
+
+        </article>
+</section>
+
+<section class="reviewsColumn">
+    <h2 class="reviewsHeader">Reviews</h2>
+        <ul>
+            <li class="reviews" th:each="Review:${anime.reviews}" th:text="${Review.review}"></li>
+        </ul>
+</section>
+
+
+
+<form th:action="'/show/' +${anime.ID}" th:object ="${newReview}" method="POST">
+    <textarea name="review" id="review" cols="30" rows="10" placeholder="Leave Your Review!"></textarea>
+    <input type="submit" name="SEND" id="sendReview">
+
+</form>
+
+<form th:action="'/show/' +${anime.ID} +'/addhashtag'" th:object ="${newHashtag}" method="POST">
+    <textarea name="hashtag" id="hashtag" cols="20" rows="2" placeholder="Leave a Hashtag!"></textarea>
+    <input type="submit" name="SEND" id="sendHashtag">
+
+</form>
+
+
+<footer class="footer">
+    <div class="footermessage">
+        <p> The Magic Rockets | We Can Code It</p>
+    </div>
+
+</footer>
+</body>
+</html>
